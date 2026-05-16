@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import StatCard from "../components/StatCard";
 import axios from "axios";
+import { api } from "../api";
 
-const API = "https://pos-backend-production-9445.up.railway.app/";
+const res = await api.get("/products");
 
 export default function Dashboard() {
   const [products, setProducts] = useState([]);
@@ -32,6 +33,7 @@ export default function Dashboard() {
 
       <div style={styles.main}>
         <h1 style={styles.title}>Dashboard POS</h1>
+        <h3>Welcome, {user?.username} ({user?.role})</h3>
 
         <div style={styles.grid}>
           <StatCard title="Omset Hari Ini" value={report.omzet} />

@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useState } from "react";
+import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 
-const API =
-  "URL_BACKEND_RAILWAY";
-
 export default function App() {
-  return <Dashboard />;
+  const [user, setUser] = useState(null);
+
+  if (!user) {
+    return <Login onLogin={setUser} />;
+  }
+
+  return <Dashboard user={user} />;
 }
