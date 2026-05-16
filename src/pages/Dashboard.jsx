@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar";
 import StatCard from "../components/StatCard";
 import axios from "axios";
 
-const API = "https://pos-backend-production-9445.up.railway.app/";
+const API = "https://pos-backend-production-ec15.up.railway.app";
 
 export default function Dashboard() {
   const [products, setProducts] = useState([]);

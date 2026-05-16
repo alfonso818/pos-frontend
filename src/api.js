@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "https://pos-backend-production-9445.up.railway.app/";
+const API = "https://pos-backend-production-ec15.up.railway.app";
 
 export const api = axios.create({
   baseURL: API
