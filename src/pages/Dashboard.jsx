@@ -4,11 +4,10 @@ import StatCard from "../components/StatCard";
 import axios from "axios";
 import { api } from "../api";
 
-const res = await api.get("/products");
-
 export default function Dashboard() {
   const [products, setProducts] = useState([]);
   const [report, setReport] = useState({ omzet: 0, profit: 0 });
+  const res = await api.get("/products");
 
   const fetchData = async () => {
     const p = await axios.get(`${API}/products`);

@@ -2,11 +2,11 @@ import { useState } from "react";
 import axios from "axios";
 import { api } from "../api";
 
-const res = await api.get("/products");
-
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const res = await api.get("/products");
+  
 
   const handleLogin = async () => {
     try {
