@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { api } from "../api";
+
+const API = "https://pos-backend-production-9445.up.railway.app/";
 
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
