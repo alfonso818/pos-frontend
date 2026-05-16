@@ -5,7 +5,6 @@ import { api } from "../api";
 export default function Login({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const res = await api.get("/products");
   
 
   const handleLogin = async () => {
