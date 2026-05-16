@@ -20,7 +20,15 @@ export default function Login({ onLogin }) {
 
       onLogin(res.data.user);
     } catch (err) {
-      alert("Login gagal");
+
+        console.log(err);
+
+        console.log(err.response);
+
+        alert(
+            err?.response?.data?.message ||
+            "Login gagal"
+        );
     }
   };
 
