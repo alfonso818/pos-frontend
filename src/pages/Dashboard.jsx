@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import Sidebar from "../components/Sidebar";
 import StatCard from "../components/StatCard";
 import axios from "axios";
-import { api } from "../api";
+
+const API = "https://pos-backend-production-9445.up.railway.app/";
 
 export default function Dashboard() {
   const [products, setProducts] = useState([]);
   const [report, setReport] = useState({ omzet: 0, profit: 0 });
-  const res = await api.get("/products");
 
   const fetchData = async () => {
     const p = await axios.get(`${API}/products`);
